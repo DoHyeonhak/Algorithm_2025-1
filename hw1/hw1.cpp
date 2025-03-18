@@ -133,12 +133,7 @@ int main(){
     Data arr[MAX_HEAP_SIZE+1];  // index는 1부터 시작하고, heap maximum size는 30이므로 30 + 1로 지정
     char cmd = 0;
 
-/*
-    (Optional):
-    Does your program work correctly when there is a space before or after a
-    menu choice, such as " P" or "p "? Which implementation is more reasonable:
-    allowing spaces or restricting input to exact characters?
-*/
+    
     while(1){
         cout << "*********** MENU ****************\nI : Insert a new element into the queue.\nD : Delete the element with the largest key from the queue.\nR : Retrieve the element with the largest key.\nN : Increase the key of an element in the queue.\nP : Print all elemenets in the queue.\nQ : Quit.\n" << endl;
         cout << "Choose menu: ";
