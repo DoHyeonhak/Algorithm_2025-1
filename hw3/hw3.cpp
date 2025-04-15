@@ -1,5 +1,5 @@
 #include <iostream>
-#include <iomanip>  // Time을 소수점 형식으로 출력하기 위함
+#include <iomanip>
 #include <ctime>
 using namespace std;
 
@@ -26,22 +26,22 @@ int main(){
     int output_recur = recursive(K, N);
     stop = clock();
 
-    duration = (double)(stop - start) / CLOCKS_PER_SEC;
+    duration = (double)(stop - start) * 1000000 / CLOCKS_PER_SEC;
     
     cout << "\n[Resursive method]" << endl;
-    cout << "Output: " << output_recur << endl;
-    cout << "Time: " << duration << " seconds" << endl;
+    cout << "Minimum Attempts: " << output_recur << endl;
+    cout << "Execution Time: " << duration << " microseconds" << endl;
     
     // dp
     start = clock();
     int output_dp = DP(K, N);
     stop = clock();
     
-    duration = (double)(stop - start) / CLOCKS_PER_SEC;
+    duration = (double)(stop - start) * 1000000 / CLOCKS_PER_SEC;
     
     cout << "\n[DP method]" << endl;
-    cout << "Output: " << output_dp << endl;
-    cout << "Time: " << duration << " seconds"<< endl;
+    cout << "Minimum Attempts: " << output_dp << endl;
+    cout << "Execution Time: " << duration << " microseconds"<< endl;
 
     return 0;
 }
